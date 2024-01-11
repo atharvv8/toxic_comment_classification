@@ -7,9 +7,8 @@
 import tensorflow as tf
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import os
-
 
 # In[2]:
 
@@ -33,7 +32,7 @@ warnings.filterwarnings('ignore')
 # In[5]:
 
 
-pwd
+#pwd
 
 
 # In[6]:
@@ -236,33 +235,6 @@ from tensorflow.keras.layers import LSTM, Dropout, Bidirectional, Dense, Embeddi
 
 model = tf.keras.models.load_model('toxicity.h5')
 model.summary()
-
-
-# In[41]:
-
-
-# history= model.fit(train,epochs=5,validation_data=val)
-
-
-# In[42]:
-
-
-# history.history
-
-
-# In[43]:
-
-
-# plt.figure(figsize=(8,5))
-# pd.DataFrame(history.history).plot()
-# plt.show()
-
-
-# **Making Predictions**
-
-# In[44]:
-
-
 batch= test.as_numpy_iterator().next()
 
 
@@ -405,21 +377,9 @@ def score_comment(comment):
 
 
 choice="1"
-
-
-# In[57]:
-
-
 while choice!="0":
     print("Enter your comment")
-    str=input()
+    str = input()
     print(score_comment(str))
     print("Enter 0 to exit")
     choice=input()
-
-
-# In[ ]:
-
-
-
-
